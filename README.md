@@ -1,2 +1,2 @@
-# programming_languages_a
-Solution for Coursera Course : Programming Language A
+# programming_languages
+Solution for Coursera Course : Programming Language
