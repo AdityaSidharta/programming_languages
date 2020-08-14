@@ -1,6 +1,8 @@
 # programming_languages
 Solution for Coursera Course : Programming Language
 
-https://www.coursera.org/learn/programming-languages?
-https://www.coursera.org/learn/programming-languages-part-b
-https://www.coursera.org/learn/programming-languages-part-c
+- Programming Language A : https://www.coursera.org/learn/programming-languages
+
+- Programming Language B : https://www.coursera.org/learn/programming-languages-part-b
+
+- Programming Language C : https://www.coursera.org/learn/programming-languages-part-c
