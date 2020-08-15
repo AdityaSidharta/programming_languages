@@ -27,6 +27,13 @@
   (letrec ([acc (lambda (x) (cons (if (= (remainder x 2) 0) "dan.jpg" "dog.jpg") (lambda () (acc (+ x 1)))))])
     (lambda () (acc 0))))
 
-(define stream-add-zero
-  (letrec ([acc (lambda (s) (cons (car (s)) (lambda () (acc (cdr (s))))))])
-    (lambda (s) ((lambda () (acc s))))))
+(define (stream-add-zero s)
+  (lambda ()
+    (let ([next (s)])
+      (cons (cons 0 (car next)) (stream-add-zero (cdr next))))))
+
+(define (cycle-lists xs ys)
+  (lambda ([]
+           [])
+    (cons (cons ) (acc 0 0))
+)
