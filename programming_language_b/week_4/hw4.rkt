@@ -22,3 +22,11 @@
 (define funny-number-stream
          (letrec ([acc (lambda (x) (cons (if (= (remainder x 5) 0) (- x) x) (lambda () (acc (+ x 1)))))])
            (lambda () (acc 1))))
+
+(define dan-then-dog
+  (letrec ([acc (lambda (x) (cons (if (= (remainder x 2) 0) "dan.jpg" "dog.jpg") (lambda () (acc (+ x 1)))))])
+    (lambda () (acc 0))))
+
+(define stream-add-zero
+  (letrec ([acc (lambda (s) (cons (car (s)) (lambda () (acc (cdr (s))))))])
+    (lambda (s) ((lambda () (acc s))))))
