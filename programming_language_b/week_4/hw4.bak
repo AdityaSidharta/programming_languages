@@ -27,33 +27,6 @@
   (letrec ([acc (lambda (x) (cons (if (= (remainder x 2) 0) "dan.jpg" "dog.jpg") (lambda () (acc (+ x 1)))))])
     (lambda () (acc 0))))
 
-<<<<<<< HEAD
-(define (stream-add-zero s)
-  (lambda ()
-    (let ([next (s)])
-      (cons (cons 0 (car next)) (stream-add-zero (cdr next))))))
-
-(define (cycle-lists xs ys)
-  (lambda ([]
-           [])
-    (cons (cons ) (acc 0 0))
-)
-=======
 (define stream-add-zero
   (letrec ([acc (lambda (s) (cons (car (s)) (lambda () (acc (cdr (s))))))])
     (lambda (s) ((lambda () (acc s))))))
-
-(define (cycle-lists xs ys)
-  (letrec ([acc (lambda (xs ys idx) (cons (cons (list-nth-mod xs idx) (list-nth-mod ys idx)) (lambda () (acc xs ys (+ idx 1)))))])
-    (lambda () (acc xs ys 0))))
-
-(define (vector-assoc v vec)
-  (letrec
-      ([is_valid (lambda (v vec index)
-                   (if (pair? (vector-ref vec index)) (if (equal? (car (vector-ref vec index)) v ) #t #f) #f))]
-       [acc (lambda (v vec index)
-              (if (equal? (vector-length vec) (+ index 1)) #f
-                  (if (is_valid v vec index) (vector-ref vec index) (acc v vec (+ index 1))))
-              )])
-    (acc v vec 0)))
->>>>>>> 8bfd2915ff8750e8cafb223bf84d7c81cc201ab4
