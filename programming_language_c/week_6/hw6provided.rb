@@ -218,7 +218,7 @@ class Board
   def store_current
     locations = @current_block.current_rotation
     displacement = @current_block.position
-    (0..3).each{|index| 
+    (0..3).each{|index|  
       current = locations[index];
       @grid[current[1]+displacement[1]][current[0]+displacement[0]] = 
       @current_pos[index]
