@@ -177,7 +177,15 @@ class Board
     end
     draw
   end
-  
+
+  # rotates the current piece counterclockwise
+  def rotate_180_degrees
+    if !game_over? and @game.is_running?
+      @current_block.move(0, 0, 2)
+    end
+    draw
+  end
+
   # drops the piece to the lowest location in the currently occupied columns.
   # Then replaces it with a new piece
   # Change the score to reflect the distance dropped.
